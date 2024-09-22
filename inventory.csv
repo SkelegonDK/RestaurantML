@@ -1,0 +1,61 @@
+ingredient_id,name,quantity,unit,expiration_date,category
+1,Chicken Breast,10,kg,2023-07-15,Meat
+2,Tomatoes,5,kg,2023-07-10,Vegetable
+3,Olive Oil,2,L,2023-12-31,Oil
+4,Pasta,15,kg,2024-01-15,Grain
+5,Garlic,2,kg,2023-07-20,Vegetable
+6,Basil,0.5,kg,2023-07-08,Herb
+7,Parmesan Cheese,3,kg,2023-08-30,Dairy
+8,Salt,5,kg,2024-06-30,Seasoning
+9,Black Pepper,1,kg,2024-06-30,Seasoning
+10,Onions,8,kg,2023-07-25,Vegetable
+11,Prosciutto,3,kg,2023-08-15,Meat
+12,Mozzarella,5,kg,2023-07-30,Dairy
+13,Balsamic Vinegar,1,L,2024-03-31,Condiment
+14,Arborio Rice,8,kg,2024-02-28,Grain
+15,Pecorino Romano,2,kg,2023-09-30,Dairy
+16,Pancetta,2,kg,2023-08-10,Meat
+17,Gnocchi,5,kg,2023-12-31,Pasta
+18,Sun-dried Tomatoes,1,kg,2023-11-30,Vegetable
+19,Pine Nuts,0.5,kg,2023-10-31,Nut
+20,Porcini Mushrooms,1,kg,2023-07-20,Vegetable
+21,Cannellini Beans,3,kg,2024-05-31,Legume
+22,Semolina Flour,5,kg,2024-01-31,Grain
+23,Mascarpone,2,kg,2023-07-25,Dairy
+24,Anchovies,0.5,kg,2023-09-15,Fish
+25,Capers,0.3,kg,2023-12-31,Condiment
+26,Oregano,0.2,kg,2023-10-31,Herb
+27,Parmigiano-Reggiano,3,kg,2023-09-30,Dairy
+28,Ricotta,4,kg,2023-07-20,Dairy
+29,Polenta,3,kg,2024-03-31,Grain
+30,Bresaola,1,kg,2023-08-20,Meat
+31,Spaghetti,10,kg,2024-02-28,Pasta
+32,Penne,8,kg,2024-02-28,Pasta
+33,Fettuccine,6,kg,2024-02-28,Pasta
+34,Rigatoni,7,kg,2024-02-28,Pasta
+35,Linguine,5,kg,2024-02-28,Pasta
+36,Orecchiette,4,kg,2024-02-28,Pasta
+37,Farfalle,5,kg,2024-02-28,Pasta
+38,Lasagna Sheets,3,kg,2024-02-28,Pasta
+39,Tagliatelle,4,kg,2024-02-28,Pasta
+40,Cannelloni,3,kg,2024-02-28,Pasta
+41,Zucchini,6,kg,2023-07-18,Vegetable
+42,Eggplant,4,kg,2023-07-20,Vegetable
+43,Bell Peppers,5,kg,2023-07-19,Vegetable
+44,Mushrooms,3,kg,2023-07-15,Vegetable
+45,Spinach,2,kg,2023-07-14,Vegetable
+46,Arugula,1,kg,2023-07-13,Vegetable
+47,Artichokes,3,kg,2023-07-18,Vegetable
+48,Radicchio,2,kg,2023-07-16,Vegetable
+49,Fennel,3,kg,2023-07-17,Vegetable
+50,Asparagus,2,kg,2023-07-15,Vegetable
+51,Guanciale,2,kg,2023-08-28,Meat
+52,Italian Sausage,5,kg,2023-07-25,Meat
+53,Mortadella,3,kg,2023-08-15,Meat
+54,Salami,3,kg,2023-09-10,Meat
+55,Capocollo,2,kg,2023-08-30,Meat
+56,Veal,4,kg,2023-07-20,Meat
+57,Beef Tenderloin,5,kg,2023-07-18,Meat
+58,Pappardelle,4,kg,2024-02-28,Pasta
+59,Bucatini,3,kg,2024-02-28,Pasta
+60,Fusilli,5,kg,2024-02-28,Pasta
