@@ -1,0 +1,368 @@
+[
+    {
+        "label": "runpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "runpy",
+        "description": "runpy",
+        "detail": "runpy",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "pformat",
+        "importPath": "pprint",
+        "description": "pprint",
+        "isExtraImport": true,
+        "detail": "pprint",
+        "documentation": {}
+    },
+    {
+        "label": "jmespath",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jmespath",
+        "description": "jmespath",
+        "detail": "jmespath",
+        "documentation": {}
+    },
+    {
+        "label": "exceptions",
+        "importPath": "jmespath",
+        "description": "jmespath",
+        "isExtraImport": true,
+        "detail": "jmespath",
+        "documentation": {}
+    },
+    {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "plotly.express",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "plotly.express",
+        "description": "plotly.express",
+        "detail": "plotly.express",
+        "documentation": {}
+    },
+    {
+        "label": "Agent",
+        "importPath": "crewai",
+        "description": "crewai",
+        "isExtraImport": true,
+        "detail": "crewai",
+        "documentation": {}
+    },
+    {
+        "label": "Task",
+        "importPath": "crewai",
+        "description": "crewai",
+        "isExtraImport": true,
+        "detail": "crewai",
+        "documentation": {}
+    },
+    {
+        "label": "Crew",
+        "importPath": "crewai",
+        "description": "crewai",
+        "isExtraImport": true,
+        "detail": "crewai",
+        "documentation": {}
+    },
+    {
+        "label": "Tool",
+        "importPath": "langchain.tools",
+        "description": "langchain.tools",
+        "isExtraImport": true,
+        "detail": "langchain.tools",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigDict",
+        "importPath": "pydantic.config",
+        "description": "pydantic.config",
+        "isExtraImport": true,
+        "detail": "pydantic.config",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "RestaurantML.bin.activate_this",
+        "description": "RestaurantML.bin.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": "RestaurantML.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "RestaurantML.bin.activate_this",
+        "description": "RestaurantML.bin.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)",
+        "detail": "RestaurantML.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "RestaurantML.bin.activate_this",
+        "description": "RestaurantML.bin.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": "RestaurantML.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "RestaurantML.bin.activate_this",
+        "description": "RestaurantML.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "RestaurantML.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": "RestaurantML.bin.activate_this",
+        "description": "RestaurantML.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "RestaurantML.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "RestaurantML.bin.activate_this",
+        "description": "RestaurantML.bin.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "RestaurantML.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "RestaurantML.bin.activate_this",
+        "description": "RestaurantML.bin.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "RestaurantML.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "RestaurantML.bin.activate_this",
+        "description": "RestaurantML.bin.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "RestaurantML.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "RestaurantML.bin.activate_this",
+        "description": "RestaurantML.bin.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "RestaurantML.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "RestaurantML.bin.jp",
+        "description": "RestaurantML.bin.jp",
+        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser()\n    parser.add_argument('expression')\n    parser.add_argument('-f', '--filename',\n                        help=('The filename containing the input data.  '\n                              'If a filename is not given then data is '\n                              'read from stdin.'))\n    parser.add_argument('--ast', action='store_true',\n                        help=('Pretty print the AST, do not search the data.'))\n    args = parser.parse_args()",
+        "detail": "RestaurantML.bin.jp",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeQueryTool",
+        "kind": 6,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "class RecipeQueryTool(BaseModel):\n    model_config = ConfigDict(arbitrary_types_allowed=True)  # Use ConfigDict here\n    inventory_df: pd.DataFrame = Field(default_factory=pd.DataFrame)\n    recipes_df: pd.DataFrame = Field(default_factory=pd.DataFrame)\n    def run(self, ingredients: str, servings: int, prompt: str) -> List[Dict]:\n        available_ingredients = set(self.inventory_df[\"name\"].str.lower())\n        if not ingredients:\n            # Sort inventory by expiration date and quantity\n            sorted_inventory = self.inventory_df.sort_values(\n                [\"expiration_date\", \"quantity\"], ascending=[True, False]",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "read_csv",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def read_csv(file_path):\n    return pd.read_csv(file_path)\n# Function to write CSV files\ndef write_file(data, file_path):\n    pd.DataFrame(data).to_csv(file_path, index=False)\n# Load data\ninventory_df = read_csv(\"inventory.csv\")\nrecipes_df = read_csv(\"recipes.csv\")\n# CrewAI Tool for querying recipes\nclass RecipeQueryTool(BaseModel):",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "write_file",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def write_file(data, file_path):\n    pd.DataFrame(data).to_csv(file_path, index=False)\n# Load data\ninventory_df = read_csv(\"inventory.csv\")\nrecipes_df = read_csv(\"recipes.csv\")\n# CrewAI Tool for querying recipes\nclass RecipeQueryTool(BaseModel):\n    model_config = ConfigDict(arbitrary_types_allowed=True)  # Use ConfigDict here\n    inventory_df: pd.DataFrame = Field(default_factory=pd.DataFrame)\n    recipes_df: pd.DataFrame = Field(default_factory=pd.DataFrame)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "update_inventory",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def update_inventory(recipe):\n    global inventory_df\n    recipe_ingredients = [\n        ing.strip().lower() for ing in recipe[\"ingredients\"].split(\",\")\n    ]\n    for ingredient in recipe_ingredients:\n        inventory_item = inventory_df[inventory_df[\"name\"].str.lower() == ingredient]\n        if not inventory_item.empty:\n            inventory_df.loc[\n                inventory_item.index, \"quantity\"",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "inventory_df",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "inventory_df = read_csv(\"inventory.csv\")\nrecipes_df = read_csv(\"recipes.csv\")\n# CrewAI Tool for querying recipes\nclass RecipeQueryTool(BaseModel):\n    model_config = ConfigDict(arbitrary_types_allowed=True)  # Use ConfigDict here\n    inventory_df: pd.DataFrame = Field(default_factory=pd.DataFrame)\n    recipes_df: pd.DataFrame = Field(default_factory=pd.DataFrame)\n    def run(self, ingredients: str, servings: int, prompt: str) -> List[Dict]:\n        available_ingredients = set(self.inventory_df[\"name\"].str.lower())\n        if not ingredients:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "recipes_df",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "recipes_df = read_csv(\"recipes.csv\")\n# CrewAI Tool for querying recipes\nclass RecipeQueryTool(BaseModel):\n    model_config = ConfigDict(arbitrary_types_allowed=True)  # Use ConfigDict here\n    inventory_df: pd.DataFrame = Field(default_factory=pd.DataFrame)\n    recipes_df: pd.DataFrame = Field(default_factory=pd.DataFrame)\n    def run(self, ingredients: str, servings: int, prompt: str) -> List[Dict]:\n        available_ingredients = set(self.inventory_df[\"name\"].str.lower())\n        if not ingredients:\n            # Sort inventory by expiration date and quantity",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "recipe_tool",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "recipe_tool = RecipeQueryTool(inventory_df=inventory_df, recipes_df=recipes_df)\n# Create Tool for CrewAI\nrecipe_query_tool = Tool(\n    name=\"Recipe Query Tool\",\n    func=recipe_tool.run,\n    description=\"A tool for querying recipes based on available ingredients, servings, and prompt\",\n)\n# CrewAI Agent for recipe suggestions\nrecipe_agent = Agent(\n    role=\"Recipe Suggester\",",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "recipe_query_tool",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "recipe_query_tool = Tool(\n    name=\"Recipe Query Tool\",\n    func=recipe_tool.run,\n    description=\"A tool for querying recipes based on available ingredients, servings, and prompt\",\n)\n# CrewAI Agent for recipe suggestions\nrecipe_agent = Agent(\n    role=\"Recipe Suggester\",\n    goal=\"Suggest recipes based on available ingredients and user prompt\",\n    backstory=\"You are an expert chef who can suggest recipes based on available ingredients and user preferences.\",",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "recipe_agent",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "recipe_agent = Agent(\n    role=\"Recipe Suggester\",\n    goal=\"Suggest recipes based on available ingredients and user prompt\",\n    backstory=\"You are an expert chef who can suggest recipes based on available ingredients and user preferences.\",\n    tools=[recipe_query_tool],\n    llm=\"ollama/llama3.1:8b\",\n)\n# Function to update inventory\ndef update_inventory(recipe):\n    global inventory_df",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "page",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "page = st.sidebar.radio(\"Go to\", [\"Inventory\", \"Recipe Suggestions\", \"Analytics\"])\n# Main content\nst.title(\"Restaurant Inventory Management System\")\nif page == \"Inventory\":\n    st.header(\"Inventory Management\")\n    st.dataframe(inventory_df)\n    # Add new item form\n    st.subheader(\"Add New Item\")\n    new_item = {}\n    new_item[\"name\"] = st.text_input(\"Item Name\")",
+        "detail": "app",
+        "documentation": {}
+    }
+]
