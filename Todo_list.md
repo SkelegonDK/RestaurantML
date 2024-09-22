@@ -73,6 +73,7 @@
 - [ ] Create cost efficiency analysis chart
 - [ ] Add date range selector for all charts
 - [ ] Implement export functionality for analytics data
+- [ ] Separate ingredients by type in analytics visualizations
 
 ## 10. Natural Language Processing Integration
 - [x] Set up CrewAI integration
@@ -90,6 +91,7 @@
 - [ ] Implement meal planning feature
 - [ ] Create cost calculation system for recipes and menu items
 - [ ] Implement dietary restriction and allergen tracking
+- [ ] Separate ingredients by type in the Ingredients selector on recipe suggestions
 
 ## 12. Testing
 - [ ] Write unit tests for core functions
