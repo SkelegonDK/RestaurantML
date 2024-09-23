@@ -6,6 +6,7 @@ from langchain.tools import Tool
 from typing import Dict, List
 from pydantic import BaseModel, Field
 from pydantic.config import ConfigDict
+from datetime import datetime, timedelta
 
 
 # Function to read CSV files
@@ -16,6 +17,15 @@ def read_csv(file_path):
 # Function to write CSV files
 def write_file(data, file_path):
     pd.DataFrame(data).to_csv(file_path, index=False)
+
+
+def get_expiring_items(inventory_df, days=7):
+    today = datetime.now().date()
+    expiration_threshold = today + timedelta(days=days)
+    expiring_items = inventory_df[
+        pd.to_datetime(inventory_df["expiration_date"]).dt.date <= expiration_threshold
+    ]
+    return expiring_items.sort_values("expiration_date")
 
 
 # Load data
@@ -98,18 +108,17 @@ def update_inventory(recipe):
 
 
 # Set page config
-st.set_page_config(page_title="Restaurant Inventory Management", layout="wide")
+st.set_page_config(page_title="Core Catering", layout="wide")
 
 # Sidebar for navigation
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to", ["Inventory", "Recipe Suggestions", "Analytics"])
 
 # Main content
-st.title("Restaurant Inventory Management System")
+st.title("Inventory Management System")
 
 if page == "Inventory":
     st.header("Inventory Management")
-    st.dataframe(inventory_df)
 
     # Add new item form
     st.subheader("Add New Item")
@@ -117,8 +126,12 @@ if page == "Inventory":
     new_item["name"] = st.text_input("Item Name")
     new_item["quantity"] = st.number_input("Quantity", min_value=0.0, step=0.1)
     new_item["unit"] = st.selectbox("Unit", ["kg", "L", "pcs"])
-    new_item["expiration_date"] = st.date_input("Expiration Date")
+    new_item["expiration_date"] = st.date_input(
+        "Expiration Date", value=datetime.now() + timedelta(days=30)
+    )
     new_item["category"] = st.text_input("Category")
+    st.empty()
+    st.dataframe(inventory_df)
 
     if st.button("Add Item"):
         new_item["ingredient_id"] = inventory_df["ingredient_id"].max() + 1
@@ -129,7 +142,7 @@ if page == "Inventory":
         st.success("Item added successfully!")
 
 elif page == "Recipe Suggestions":
-    st.header("Recipe Suggestions")
+    st.header("Recipe Suggestions Engine")
 
     # Create a multiselect for ingredients from inventory
     available_ingredients = inventory_df["name"].tolist()
@@ -191,6 +204,16 @@ elif page == "Analytics":
     )
     st.plotly_chart(fig2)
 
+    # Table of items expiring within a week
+    st.subheader("Items Expiring Within a Week")
+    expiring_items = get_expiring_items(inventory_df)
+    if not expiring_items.empty:
+        st.dataframe(
+            expiring_items[["name", "quantity", "unit", "expiration_date", "category"]]
+        )
+    else:
+        st.info("No items are expiring within the next week.")
+
 # Footer
 st.sidebar.markdown("---")
-st.sidebar.text("Restaurant Inventory Management v0.1")
+st.sidebar.text("Core Catering v0.1")
