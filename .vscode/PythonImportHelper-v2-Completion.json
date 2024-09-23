@@ -186,6 +186,22 @@
         "documentation": {}
     },
     {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "bin_dir",
         "kind": 5,
         "importPath": "RestaurantML.bin.activate_this",
@@ -289,7 +305,7 @@
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def read_csv(file_path):\n    return pd.read_csv(file_path)\n# Function to write CSV files\ndef write_file(data, file_path):\n    pd.DataFrame(data).to_csv(file_path, index=False)\n# Load data\ninventory_df = read_csv(\"inventory.csv\")\nrecipes_df = read_csv(\"recipes.csv\")\n# CrewAI Tool for querying recipes\nclass RecipeQueryTool(BaseModel):",
+        "peekOfCode": "def read_csv(file_path):\n    return pd.read_csv(file_path)\n# Function to write CSV files\ndef write_file(data, file_path):\n    pd.DataFrame(data).to_csv(file_path, index=False)\ndef get_expiring_items(inventory_df, days=7):\n    today = datetime.now().date()\n    expiration_threshold = today + timedelta(days=days)\n    expiring_items = inventory_df[\n        pd.to_datetime(inventory_df[\"expiration_date\"]).dt.date <= expiration_threshold",
         "detail": "app",
         "documentation": {}
     },
@@ -298,7 +314,16 @@
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def write_file(data, file_path):\n    pd.DataFrame(data).to_csv(file_path, index=False)\n# Load data\ninventory_df = read_csv(\"inventory.csv\")\nrecipes_df = read_csv(\"recipes.csv\")\n# CrewAI Tool for querying recipes\nclass RecipeQueryTool(BaseModel):\n    model_config = ConfigDict(arbitrary_types_allowed=True)  # Use ConfigDict here\n    inventory_df: pd.DataFrame = Field(default_factory=pd.DataFrame)\n    recipes_df: pd.DataFrame = Field(default_factory=pd.DataFrame)",
+        "peekOfCode": "def write_file(data, file_path):\n    pd.DataFrame(data).to_csv(file_path, index=False)\ndef get_expiring_items(inventory_df, days=7):\n    today = datetime.now().date()\n    expiration_threshold = today + timedelta(days=days)\n    expiring_items = inventory_df[\n        pd.to_datetime(inventory_df[\"expiration_date\"]).dt.date <= expiration_threshold\n    ]\n    return expiring_items.sort_values(\"expiration_date\")\n# Load data",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "get_expiring_items",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def get_expiring_items(inventory_df, days=7):\n    today = datetime.now().date()\n    expiration_threshold = today + timedelta(days=days)\n    expiring_items = inventory_df[\n        pd.to_datetime(inventory_df[\"expiration_date\"]).dt.date <= expiration_threshold\n    ]\n    return expiring_items.sort_values(\"expiration_date\")\n# Load data\ninventory_df = read_csv(\"inventory.csv\")\nrecipes_df = read_csv(\"recipes.csv\")",
         "detail": "app",
         "documentation": {}
     },
@@ -361,7 +386,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "page = st.sidebar.radio(\"Go to\", [\"Inventory\", \"Recipe Suggestions\", \"Analytics\"])\n# Main content\nst.title(\"Restaurant Inventory Management System\")\nif page == \"Inventory\":\n    st.header(\"Inventory Management\")\n    st.dataframe(inventory_df)\n    # Add new item form\n    st.subheader(\"Add New Item\")\n    new_item = {}\n    new_item[\"name\"] = st.text_input(\"Item Name\")",
+        "peekOfCode": "page = st.sidebar.radio(\"Go to\", [\"Inventory\", \"Recipe Suggestions\", \"Analytics\"])\n# Main content\nst.title(\"Inventory Management System\")\nif page == \"Inventory\":\n    st.header(\"Inventory Management\")\n    # Add new item form\n    st.subheader(\"Add New Item\")\n    new_item = {}\n    new_item[\"name\"] = st.text_input(\"Item Name\")\n    new_item[\"quantity\"] = st.number_input(\"Quantity\", min_value=0.0, step=0.1)",
         "detail": "app",
         "documentation": {}
     }
